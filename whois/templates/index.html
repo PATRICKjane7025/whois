@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WHOIS Lookup</title>
+</head>
+<body>
+    <h1>WHOIS Lookup</h1>
+    <form action="/lookup" method="post">
+        <label for="domain_name">Enter Domain Name:</label>
+        <input type="text" name="domain_name" id="domain_name" autofocus>
+        <br>
+        <button type="submit">Lookup</button>
+    </form>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
